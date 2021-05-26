@@ -1,0 +1,154 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 55px;
+  background-color: rgb(73, 73, 73);
+}
+
+nav a {
+  color: rgb(233, 233, 233);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+img {
+  height: 35px;
+  margin: 0 10px;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.headings {
+  display: flex;
+}
+
+.wide {
+  width: 45%;
+  margin: 40px 15% 0 0;
+}
+
+.narrow {
+  width: 40%;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+  font-size: 1.4vw;
+}
+
+h1 {
+  font-size: 5.5vw;
+}
+
+.wide a {
+  cursor: pointer;
+  font-size: 2.5vw;
+  border-bottom: 4px solid black;
+}
+
+a span {
+  font-size: 3vw;
+}
+
+.wide a:hover {
+  color: blue;
+  border-bottom: 4px dashed blue;
+  transition: all 0.2s;
+}
+
+.resultsParent {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.getResults {
+  border: none;
+  background-color: black;
+  color: white;
+  height: 300px;
+  border-radius: 4px;
+  color: white;
+  font-size: 2.3vw;
+}
+
+.getResults:hover {
+  background-color: blue;
+}
+
+.resultsParent li {
+  list-style: none;
+  height: 285px;
+  display: inline-block;
+  padding: 15px 15px 0 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 2.3vw;
+  text-align: center;
+  animation: animateElement linear 0.2s;
+  animation-iteration-count: 1;
+}
+
+.resultsParent li:nth-child(4n + 1) {
+  background-color: pink;
+  color: crimson;
+}
+
+.resultsParent li:nth-child(4n + 1):hover {
+  background-color: crimson;
+  color: pink;
+}
+
+.resultsParent li:nth-child(4n + 2) {
+  background-color: lightseagreen;
+  color: papayawhip;
+}
+
+.resultsParent li:nth-child(4n + 2):hover {
+  background-color: papayawhip;
+  color: lightseagreen;
+}
+
+.resultsParent li:nth-child(4n + 3) {
+  background-color: lavender;
+  color: goldenrod;
+}
+
+.resultsParent li:nth-child(4n + 3):hover {
+  background-color: goldenrod;
+  color: lavender;
+}
+
+.resultsParent li:nth-child(4n) {
+  background-color: navy;
+  color: paleturquoise;
+}
+
+.resultsParent li:nth-child(4n):hover {
+  background-color: paleturquoise;
+  color: navy;
+}
+
+@keyframes animateElement {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
