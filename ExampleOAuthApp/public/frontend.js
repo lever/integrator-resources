@@ -17,7 +17,7 @@ example.scope;
 example.state;
 example.baseURL;
 
-document.addEventListener('DOMContentLoaded', function () {
+function getCredentials() {
   fetch('/dotenv', { responseType: 'json' })
     .then(function (u) {
       return u.json();
@@ -32,7 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         baseURL,
       });
     });
-});
+}
+
+getCredentials();
 
 /**
  * STEP 1: REQUEST USER AUTHORIZATION

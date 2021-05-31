@@ -8,7 +8,7 @@
 
 **A small app to experience and see code examples of the 5 steps to get OAuth authentication set up on your integration**
 
-To get started with the example app
+To get started with the example app. The app uses Express/NodeJS.
 
 1. Clone the repository and navigate into the folder
 
