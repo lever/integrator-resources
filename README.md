@@ -10,7 +10,7 @@
 
 To get started with the example app. The app uses Express/NodeJS.
 
-1. Clone the repository and navigate into the folder
+1. Clone the repository and navigate into the `ExampleOAuthApp` folder
 
 ```
 npm install
