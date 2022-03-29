@@ -72,7 +72,7 @@ app.get('/opportunities', (req, res, next) => {
 });
 
 /**
- * STEP 5: USE REFRESH TOKEN TO REFRESH AN ACCESS TOKEN
+ * STEP 5: USE REFRESH TOKEN TO REFRESH AN ACCESS TOKEN AND GET A NEW REFRESH TOKEN
  * Repeat this call based on expiry returned with the access token to maintain persistent authentication
  */
 app.get('/refresh', (req, res, next) => {
@@ -85,6 +85,7 @@ app.get('/refresh', (req, res, next) => {
     })
     .then((response) => {
       req.session.accessToken = response.data.access_token;
+      req.session.refreshToken = response.data.refresh_token;
     })
     .catch((err) => {
       res.send(err);
